@@ -1,0 +1,69 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/product/product",
+			"style": {
+				"navigationBarTitleText": "商品"
+			}
+		},
+		{
+			"path": "pages/shoppingCart/shoppingCart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/my/myMain",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color": "#2C2C2C",
+		"selectedColor": "#EB5C5C",
+		"borderStyle": "black",
+		"backgroundColor":"#FFFFFF",
+		"list": [
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"static/barImg/home-1.png",
+				"selectedIconPath":"static/barImg/home.png",
+				"text":"首页"
+			},
+			{
+				"pagePath":"pages/product/product",
+				"iconPath":"static/barImg/product-1.png",
+				"selectedIconPath":"static/barImg/product.png",
+				"text":"商品"
+			},
+			{
+				"pagePath":"pages/shoppingCart/shoppingCart",
+				"iconPath":"static/barImg/shopping-1.png",
+				"selectedIconPath":"static/barImg/shopping.png",
+				"text":"购物车"
+			},
+			{
+				"pagePath":"pages/my/myMain",
+				"iconPath":"static/barImg/my-1.png",
+				"selectedIconPath":"static/barImg/my.png",
+				"text":"我的"
+			}
+		]
+	}
+}
