@@ -47,10 +47,22 @@ export default ({ method, url, data, headers = { "Content-Type" : "application/c
 		method: method,
 		url: url,
 		data: data,
-		headers: headers
+		headers: headers,
+		withCredentials: true
 	})
 	try {
-		return uni.request($options)
+		return new Promise((resolve,reject)=>{
+			uni.request({
+				method: method,
+				url: url,
+				data: data,
+				header: headers,
+				withCredentials: true,
+				success: (data) => {
+					resolve(data);
+				}
+			})
+		})
 	}
 	catch (ex) {
 		throw new Error(`network exception ! \n ex:$(ex.message) \n methos: ${method} \n url:${url} \n param:${JSON.stringify(params)}`)
